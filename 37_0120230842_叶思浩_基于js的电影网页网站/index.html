@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>观影 GYING</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/th.jpg">
+    <script src="https://unpkg.com/vue@3.5.13/dist/vue.global.prod.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">观影 GYING</a></div>
+        <div id="app">
+            <ul class="menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="电影.html">电影</a></li>
+                <li><a href="剧集.html">剧集</a></li>
+                <li><a href="动漫.html">动漫</a></li>
+                <!-- <li><a href="#">预告</a></li>
+                <li><a href="#">解析</a></li>
+                <li><a href="#">网址</a></li> -->
+                
+                <li><a @click="toggleTheme" class="theme-toggle">切换主题 </a> </li>
+  
+            </ul>
+        </div>
+        <form class="search-form">
+            <input type="text" placeholder="输入关键词">
+            <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" line-cap="round" line-join="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+        </form>
+        <div class="user-links">
+            <a href="#">收藏</a>
+            <a href="#">观看历史</a>
+            <div class="profile-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" line-cap="round" line-join="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+        </div>
+    </nav>
+    <div class="form">
+        <div class="carousel">
+            <a href="#">
+                <img src="./img/i_8E8e.jpg" alt="">
+            </a>
+            <div class="text-overlay">英雄联盟：双城之战 第二季<br>
+                <p>黑暗梦魇，有增无减。务必认清，敌人的真面目......</p>
+            </div>
+            
+    
+            <a href="#">
+                <img src="./img/i_k6nV.jpg" alt="">
+            </a>
+
+    
+            <a href="#">
+                <img src="./img/i_oLaM.jpg" alt="">
+            </a>
+
+    
+            <a href="#">
+                <img src="./img/i_eYM7.jpg" alt="">
+            </a>
+
+    
+            <a href="#">
+                <img src="./img/i_1dGA.jpg" alt="">
+            </a>
+
+
+            <a href="#">
+                <img src="./img/i_j6P6.jpg" alt="">
+            </a>
+
+        </div>
+        <div class="indicator">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+
+    <div class="moviebanner">
+        <h2>最近更新的电影</h2>
+    </div>
+    <div class="new_movie">
+        <div class='movie_row'>
+            <a href="#">
+                <img src="./img/里斯本丸沉没.jpg" alt="">
+                <p id="1">里斯本丸沉没</p> 
+                <div class="tag">2023 / 大陆 / 记录 /人性</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/名侦探柯南.jpg" alt="">
+                <p id="1">名侦探柯南</p>
+                <div class="tag">2024 / 日本 / 动画 / 犯罪/ 悬疑</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/危机航线.jpg" alt="">
+                <p id="1">危机航线</p>
+                <div class="tag">2024 / 香港 / 动作 / 犯罪 /灾难</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/秘密会议.jpg" alt="">
+                <p id="1">秘密会议</p>
+                <div class="tag">2024 / 英国 / 惊悚</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/过季.jpg" alt="">
+                <p id="1">过季</p>
+                <div class="tag">2023 / 法国 / 剧情 / 文艺</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/我们同在.jpg" alt="">
+                <p id="1">我们同在</p>
+                <div class="tag">2024 / 英国 / 剧情 / 爱情</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/出走的决心.jpg" alt="">
+                <p id="1">出走的决心</p>
+                <div class="tag">2023 / 大陆 / 剧情/ 家庭 / 人性</div>
+            </a>
+
+        </div>
+        
+    </div>
+
+
+    <div class="new_movie">
+        <div class='movie_row'>
+            <a href="#">
+                <img src="./img/浴火之路.jpg" alt="">
+                <p id="1">欲火之路</p> 
+                <div class="tag">2024 / 大陆 / 剧情 / 犯罪 / 人性</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/流浪地球2：再次冒险.jpg" alt="">
+                <p id="1">流浪地球2：再次冒险</p>
+                <div class="tag">2024 /大陆 / 记录</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/夺命微笑.jpg" alt="">
+                <p id="1">夺命微笑</p>
+                <div class="tag">2024 / 美国 / 恐怖 / 惊悚 / 悬疑</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/艾米莉亚·佩雷斯.jpg" alt="">
+                <p id="1">艾米莉亚·佩雷斯</p>
+                <div class="tag">2024 / 法国 / 喜剧 / 歌舞 / 惊悚</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/周六夜时光.jpg" alt="">
+                <p id="1">周六夜时光</p>
+                <div class="tag">2023 / 美国 / 剧情 / 喜剧 / 传记</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/绝密配方.jpg" alt="">
+                <p id="1">绝密配方</p>
+                <div class="tag">2024 / 塞尔维亚 / 剧情 / 惊悚</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/蓦然回首.jpg" alt="">
+                <p id="1">蓦然回首</p>
+                <div class="tag">2024 / 日本 / 动画/ 青春 / 剧情</div>
+            </a>
+
+        </div>
+        
+    </div>
+
+
+    <div class="moviebanner">
+        <h2>最近更新的剧集</h2>
+    </div>
+    <div class="new_movie">
+        <div class='movie_row'>
+            <a href="#">
+                <img src="./img/白夜破晓.jpg" alt="">
+                <p id="1">白夜破晓</p> 
+                <div class="tag">2023 / 大陆 / 剧情 /犯罪</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/梦魇绝镇.jpg" alt="">
+                <p id="1">梦魇绝镇</p>
+                <div class="tag">2024 / 美国 / 剧情 / 科幻/ 恐怖</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/石油天王.jpg" alt="">
+                <p id="1">石油天王</p>
+                <div class="tag">2024 / 美国 / 剧情</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/正年.jpg" alt="">
+                <p id="1">正年</p>
+                <div class="tag">2024 / 韩国 / 剧情 / 励志 / 女性</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/沙丘：预言 第一季.jpg" alt="">
+                <p id="1">沙丘：预言 第一季</p>
+                <div class="tag">2023 / 美国 / 剧情 / 科幻 / 动作</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/珠帘玉幕.jpg" alt="">
+                <p id="1">珠帘玉幕</p>
+                <div class="tag">2024 / 大陆 / 剧情 / 爱情 / 古装</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/守护解放西5.jpg" alt="">
+                <p id="1">守护解放西5</p>
+                <div class="tag">2023 / 大陆 / 记录</div>
+            </a>
+
+        </div>
+        
+    </div>
+
+    <div class="new_movie">
+        <div class='movie_row'>
+            <a href="#">
+                <img src="./img/亚历克斯·克罗斯.jpg" alt="">
+                <p id="1">亚历克斯·克罗斯</p> 
+                <div class="tag">2024 / 大陆 / 剧情 / 犯罪 / 人性</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/塔尔萨之王.jpg" alt="">
+                <p id="1">塔尔萨之王</p>
+                <div class="tag">2024 / 美国 / 动作 / 惊悚 / 犯罪</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/贞淑的推销.jpg" alt="">
+                <p id="1">贞淑的推销</p>
+                <div class="tag">2024 / 韩国 / 剧情 / 喜剧 / 女性</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/大梦归离.jpg" alt="">
+                <p id="1">大梦归离</p>
+                <div class="tag">2024 / 大陆 / 剧情 / 爱情 / 奇幻</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/保持沉默.jpg" alt="">
+                <p id="1">保持沉默</p>
+                <div class="tag">2023 / 美国 / 剧情 / 惊悚 / 历史</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/小巷人家.jpg" alt="">
+                <p id="1">小巷人家</p>
+                <div class="tag">2024 / 大陆 / 剧情 </div>
+            </a>
+
+            <a href="#">
+                <img src="./img/永夜星河.jpg" alt="">
+                <p id="1">永夜星河</p>
+                <div class="tag">2024 / 大陆 / 爱情 / 古装</div>
+            </a>
+
+        </div>
+        
+    </div>
+
+    <div class="moviebanner">
+        <h2>最近更新的动漫</h2>
+    </div>
+    <div class="new_movie">
+        <div class='movie_row'>
+            <a href="#">
+                <img src="./img/死神 千年血战篇.jpg" alt="">
+                <p id="1">死神 千年血战篇</p> 
+                <div class="tag">2024 / 日本 / 战斗 / 热血 /冒险</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/妖精的尾巴：百年任务.jpg" alt="">
+                <p id="1">妖精的尾巴：百年任务</p>
+                <div class="tag">2024 / 日本 / 战斗 / 热血 / 奇幻</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/英雄联盟：双城之战2.jpg" alt="">
+                <p id="1">英雄联盟：双城之战2</p>
+                <div class="tag">2024 / 美国 / 剧情 / 科幻/ 冒险</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/超自然武装当哒当.jpg" alt="">
+                <p id="1">超自然武装当哒当</p>
+                <div class="tag">2024 / 日本 / 剧情 / 战斗 / 奇幻</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/伍六七之记忆碎片.jpg" alt="">
+                <p id="1">伍六七之记忆碎片</p>
+                <div class="tag">2023 / 大陆 / 战斗 / 搞笑/ 冒险</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/青之箱.jpg" alt="">
+                <p id="1">青之箱</p>
+                <div class="tag">2024 / 日本 / 恋爱 / 校园 / 运动</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/Re：从零开始的异世界生活.jpg" alt="">
+                <p id="1">Re：从零开始的异世界生活</p>
+                <div class="tag">2023 / 日本 / 战斗 / 冒险 / 奇幻</div>
+            </a>
+
+        </div>
+        
+    </div>
+
+    <div class="new_movie">
+        <div class='movie_row'>
+            <a href="#">
+                <img src="./img/物语系列.jpg" alt="">
+                <p id="1">物语系列</p> 
+                <div class="tag">2024 / 日本 / 奇幻 / 青春</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/腼腆英雄.jpg" alt="">
+                <p id="1">腼腆英雄</p>
+                <div class="tag">2024 / 日本 / 战斗 /奇幻</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/成何体统.jpg" alt="">
+                <p id="1">成何体统</p>
+                <div class="tag">2024 / 大陆 / 搞笑 / 恋爱</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/斩神之凡尘神域.jpg" alt="">
+                <p id="1">斩神之凡尘神域</p>
+                <div class="tag">2024 / 大陆 / 战斗 / 奇幻</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/我的妻子没有感情.jpg" alt="">
+                <p id="1">我的妻子没有感情</p>
+                <div class="tag">2023 / 日本 / 科幻 / 日常 / 恋爱</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/魔导师妲莉亚.jpg" alt="">
+                <p id="1">魔导师妲莉亚</p>
+                <div class="tag">2024 / 日本 / 日常 / 奇幻 </div>
+            </a>
+
+            <a href="#">
+                <img src="./img/放学后少年花子君.jpg" alt="">
+                <p id="1">放学后少年花子君</p>
+                <div class="tag">2024 / 日本 / 日常 / 恋爱 / 奇幻</div>
+            </a>
+
+        </div>
+        
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>

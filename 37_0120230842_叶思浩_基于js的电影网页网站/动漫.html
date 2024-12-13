@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动漫筛选</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/th.jpg">
+    <script src="https://unpkg.com/vue@3.5.13/dist/vue.global.prod.js"></script>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">观影 GYING</a></div>
+        <div id="app">
+            <ul class="menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="电影.html">电影</a></li>
+                <li><a href="剧集.html">剧集</a></li>
+                <li><a href="动漫.html">动漫</a></li>
+                <!-- <li><a href="#">预告</a></li>
+                <li><a href="#">解析</a></li>
+                <li><a href="#">网址</a></li> -->
+                <li><a @click="toggleTheme" class="theme-toggle">切换主题 </a> </li>
+            </ul>
+        </div>
+        <form class="search-form">
+            <input type="text" placeholder="输入关键词">
+            <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" line-cap="round" line-join="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+        </form>
+        <div class="user-links">
+            <a href="#">收藏</a>
+            <a href="#">观看历史</a>
+            <div class="profile-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" line-cap="round" line-join="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+        </div>
+    </nav>
+    <div class="list-box">
+        <dl class="c0">
+            <dt>类型</dt>
+            <dd>
+                <a class="on">全部</a>
+                <a href="">剧情</a>
+                <a href="">科幻</a>
+                <a href="">动作</a>
+                <a href="">喜剧</a>
+                <a href="">爱情</a>
+                <a href="">冒险</a>
+                <a href="">儿童</a>
+                <a href="">歌舞</a>
+                <a href="">音乐</a>
+                <a href="">奇幻</a>
+                <a href="">动画</a>
+                <a href="">恐怖</a>
+                <a href="">惊悚</a>
+                <a href="">丧尸</a>
+                <a href="">战争</a>
+                <a href="">传记</a>
+                <a href="">记录</a>
+                <a href="">犯罪</a>
+                <a href="">悬疑</a>
+                <a href="">西部</a>
+                <a href="">灾难</a>
+                <a href="">古装</a>
+                <a href="">武侠</a>
+                <a href="">家庭</a>
+                <a href="">短片</a>
+                <a href="">校园</a>
+                <a href="">文艺</a>
+                <a href="">运动</a>
+                <a href="">青春</a>
+                <a href="">同性</a>
+                <a href="">励志</a>
+                <a href="">人性</a>
+                <a href="">美食</a>
+                <a href="">女性</a>
+                <a href="">治愈</a>
+                <a href="">历史</a>
+                <a href="">真人秀</a>
+                <a href="">脱口秀</a>
+                <a class="on" style="display: none;"></a>
+                <a href="">多选</a>
+            </dd>
+        </dl>
+
+        <dl class="c1">
+            <dt>年代</dt>
+            <dd>
+                <a class="on">全部</a>
+                <a href="">2024</a>
+                <a href="">2023</a>
+                <a href="">2022</a>
+                <a href="">2021</a>
+                <a href="">2020</a>
+                <a href="">2019</a>
+                <a href="">2018</a>
+                <a href="">2017</a>
+                <a href="">2016</a>
+                <a href="">2015</a>
+                <a href="">2014</a>
+                <a href="">20年代</a>
+                <a href="">10年代</a>
+                <a href="">00年代</a>
+                <a href="">90年代</a>
+                <a href="">80年代</a>
+                <a href="">70年代</a>
+                <a href="">60年代</a>
+                <a class="on" style="display: none;"></a>
+                <a href="">更早</a>
+            </dd>
+        </dl>
+
+        <dl class="c2">
+            <dt>地区</dt>
+            <dd>
+                <a class="on">全部</a>
+                <a href="">大陆</a>
+                <a href="">香港</a>
+                <a href="">台湾</a>
+                <a href="">海外</a>
+                <a href="">欧美</a>
+                <a href="">美国</a>
+                <a href="">日本</a>
+                <a href="">韩国</a>
+                <a href="">英国</a>
+                <a href="">法国</a>
+                <a href="">德国</a>
+                <a href="">印度</a>
+                <a href="">泰国</a>
+                <a href="">瑞典</a>
+                <a href="">巴西</a>
+                <a href="">加拿大</a>
+                <a href="">意大利</a>
+                <a href="">比利时</a>
+                <a href="">西班牙</a>
+                <a href="">西班牙</a>
+                <a class="on" style="display: none;"></a>
+                <a href="">澳大利亚</a>
+            </dd>
+        </dl>
+
+        <dl class="c3">
+            <dt>地区</dt>
+            <dd>
+                <a class="on">全部</a>
+                <a href="">英语</a>
+                <a href="">法语</a>
+                <a href="">国语</a>
+                <a href="">粤语</a>
+                <a href="">日语</a>
+                <a href="">韩语</a>
+                <a href="">泰语</a>
+                <a href="">德语</a>
+                <a href="">俄语</a>
+                <a href="">闽南语</a>
+                <a href="">丹麦语</a>
+                <a href="">波兰语</a>
+                <a href="">瑞典语</a>
+                <a href="">印地语</a>
+                <a href="">挪威语</a>
+                <a href="">意大利语</a>
+                <a href="">西班牙语</a>
+                <a href="">比利时</a>
+                <a href="">西班牙</a>
+                <a class="on" style="display: none;"></a>
+                <a href="">无对白</a>
+            </dd>
+        </dl>
+    </div>
+
+    <div class="new_movie">
+        <div class='movie_row'>
+            <a href="#">
+                <img src="./img/死神 千年血战篇.jpg" alt="">
+                <p id="1">死神 千年血战篇</p> 
+                <div class="tag">2024 / 日本 / 战斗 / 热血 /冒险</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/妖精的尾巴：百年任务.jpg" alt="">
+                <p id="1">妖精的尾巴：百年任务</p>
+                <div class="tag">2024 / 日本 / 战斗 / 热血 / 奇幻</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/英雄联盟：双城之战2.jpg" alt="">
+                <p id="1">英雄联盟：双城之战2</p>
+                <div class="tag">2024 / 美国 / 剧情 / 科幻/ 冒险</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/超自然武装当哒当.jpg" alt="">
+                <p id="1">超自然武装当哒当</p>
+                <div class="tag">2024 / 日本 / 剧情 / 战斗 / 奇幻</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/伍六七之记忆碎片.jpg" alt="">
+                <p id="1">伍六七之记忆碎片</p>
+                <div class="tag">2023 / 大陆 / 战斗 / 搞笑/ 冒险</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/青之箱.jpg" alt="">
+                <p id="1">青之箱</p>
+                <div class="tag">2024 / 日本 / 恋爱 / 校园 / 运动</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/Re：从零开始的异世界生活.jpg" alt="">
+                <p id="1">Re：从零开始的异世界生活</p>
+                <div class="tag">2023 / 日本 / 战斗 / 冒险 / 奇幻</div>
+            </a>
+
+        </div>
+        
+    </div>
+
+    <div class="new_movie">
+        <div class='movie_row'>
+            <a href="#">
+                <img src="./img/物语系列.jpg" alt="">
+                <p id="1">物语系列</p> 
+                <div class="tag">2024 / 日本 / 奇幻 / 青春</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/腼腆英雄.jpg" alt="">
+                <p id="1">腼腆英雄</p>
+                <div class="tag">2024 / 日本 / 战斗 /奇幻</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/成何体统.jpg" alt="">
+                <p id="1">成何体统</p>
+                <div class="tag">2024 / 大陆 / 搞笑 / 恋爱</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/斩神之凡尘神域.jpg" alt="">
+                <p id="1">斩神之凡尘神域</p>
+                <div class="tag">2024 / 大陆 / 战斗 / 奇幻</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/我的妻子没有感情.jpg" alt="">
+                <p id="1">我的妻子没有感情</p>
+                <div class="tag">2023 / 日本 / 科幻 / 日常 / 恋爱</div>
+            </a>
+
+            <a href="#">
+                <img src="./img/魔导师妲莉亚.jpg" alt="">
+                <p id="1">魔导师妲莉亚</p>
+                <div class="tag">2024 / 日本 / 日常 / 奇幻 </div>
+            </a>
+
+            <a href="#">
+                <img src="./img/放学后少年花子君.jpg" alt="">
+                <p id="1">放学后少年花子君</p>
+                <div class="tag">2024 / 日本 / 日常 / 恋爱 / 奇幻</div>
+            </a>
+
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
